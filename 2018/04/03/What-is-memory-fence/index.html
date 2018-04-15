@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Development," />
 
 
 
@@ -79,13 +79,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Lizhong&#39;s blog">
-<meta property="og:url" content="http://yoursite.com/archives/2017/12/index.html">
+<meta name="description" content="现代cpu经常为了运行效率执行无序化指令来最大限度利用现有的硅（包括内存读和写）。因为硬件要维持指令的完整性你不会意识到在单线程里执行。然而在多线程或随机存储器的环境中是无法预知的行为。 而内存栅栏是一个指令类，它意味着内存的读写是有序的。例如”full fence”意味着所有的读写操作在栅栏提交之前">
+<meta name="keywords" content="Development">
+<meta property="og:type" content="article">
+<meta property="og:title" content="什么是内存栅栏">
+<meta property="og:url" content="http://yoursite.com/2018/04/03/What-is-memory-fence/index.html">
 <meta property="og:site_name" content="Lizhong&#39;s blog">
+<meta property="og:description" content="现代cpu经常为了运行效率执行无序化指令来最大限度利用现有的硅（包括内存读和写）。因为硬件要维持指令的完整性你不会意识到在单线程里执行。然而在多线程或随机存储器的环境中是无法预知的行为。 而内存栅栏是一个指令类，它意味着内存的读写是有序的。例如”full fence”意味着所有的读写操作在栅栏提交之前">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-04-02T18:03:07.022Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Lizhong&#39;s blog">
+<meta name="twitter:title" content="什么是内存栅栏">
+<meta name="twitter:description" content="现代cpu经常为了运行效率执行无序化指令来最大限度利用现有的硅（包括内存读和写）。因为硬件要维持指令的完整性你不会意识到在单线程里执行。然而在多线程或随机存储器的环境中是无法预知的行为。 而内存栅栏是一个指令类，它意味着内存的读写是有序的。例如”full fence”意味着所有的读写操作在栅栏提交之前">
 
 
 
@@ -115,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/archives/2017/12/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/04/03/What-is-memory-fence/"/>
 
 
 
 
 
-  <title>归档 | Lizhong's blog</title>
+  <title>什么是内存栅栏 | Lizhong's blog</title>
   
 
 
@@ -140,7 +145,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -224,148 +229,152 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-      <span class="archive-page-counter">
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/03/What-is-memory-fence/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lizhong">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/slz.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Lizhong's blog">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h1 class="post-title" itemprop="name headline">什么是内存栅栏</h1>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-03T01:38:23+08:00">
+                2018-04-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        
-        嗯..! 目前共计 6 篇日志。 继续努力。
-      </span>
 
-      
-
-        
-        
-        
-
-        
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2017">2017</h1>
-          </div>
-        
-        
+            
+          
 
-        
+          
+          
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+          
 
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/12/02/N-Queens/" itemprop="url">
-              
-                <span itemprop="name">N皇后问题</span>
-              
-            </a>
-        
-      </h2>
+          
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-12-02T18:11:23+08:00"
-              content="2017-12-02" >
-          12-02
-        </time>
-      </div>
+          
 
-    </header>
-  </article>
+        </div>
+      </header>
+    
 
-
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/12/02/Value-Theory/" itemprop="url">
-              
-                <span itemprop="name">人的价值、我的观念</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-12-02T11:28:29+08:00"
-              content="2017-12-02" >
-          12-02
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/12/02/My-first-blog/" itemprop="url">
-              
-                <span itemprop="name">My first blog</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-12-02T11:03:19+08:00"
-              content="2017-12-02" >
-          12-02
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+      
+        <p>现代cpu经常为了运行效率执行无序化指令来最大限度利用现有的硅（包括内存读和写）。因为硬件要维持指令的完整性你不会意识到在单线程里执行。然而在多线程或随机存储器的环境中是无法预知的行为。</p>
+<p>而内存栅栏是一个指令类，它意味着内存的读写是有序的。例如”full fence”意味着所有的读写操作在栅栏提交之前</p>
 
       
-
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Development/" rel="tag"># Development</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/02/09/Cache-Friendly/" rel="next" title="什么是缓存友好">
+                <i class="fa fa-chevron-left"></i> 什么是缓存友好
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/04/03/Cache-coherency/" rel="prev" title="缓存一致性">
+                缓存一致性 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -373,6 +382,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -591,6 +604,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
 
   
 

@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Development," />
 
 
 
@@ -79,17 +79,18 @@
 
 
 
-<meta name="description" content="新的博客建好了，以后我将在这里记录我的成长，包括但不限定于工作、学习、见识、思考。">
+<meta name="description" content="在现代计算机中，只有寄存器能在一个时钟周期移动数据。但由于寄存器非常昂贵,所以数量也比较少。而另一端的闪存（内存），是非常廉价的。但它的访问时间需要上百个时钟周期。那么对于它们之间的差距用什么来填充呢？那就是CPU的高速缓存，命名为L1、L2、L3。从L1到L3的速度和价格都是递减的。如果处理器不能在L1缓存中找到数据">
+<meta name="keywords" content="Development">
 <meta property="og:type" content="article">
-<meta property="og:title" content="My first blog">
-<meta property="og:url" content="http://yoursite.com/2017/12/02/My-first-blog/index.html">
+<meta property="og:title" content="什么是缓存友好">
+<meta property="og:url" content="http://yoursite.com/2018/02/09/Cache-Friendly/index.html">
 <meta property="og:site_name" content="Lizhong&#39;s blog">
-<meta property="og:description" content="新的博客建好了，以后我将在这里记录我的成长，包括但不限定于工作、学习、见识、思考。">
+<meta property="og:description" content="在现代计算机中，只有寄存器能在一个时钟周期移动数据。但由于寄存器非常昂贵,所以数量也比较少。而另一端的闪存（内存），是非常廉价的。但它的访问时间需要上百个时钟周期。那么对于它们之间的差距用什么来填充呢？那就是CPU的高速缓存，命名为L1、L2、L3。从L1到L3的速度和价格都是递减的。如果处理器不能在L1缓存中找到数据，则会在L2找，然后L3，再到内存。每一次miss都将损耗时间。 提高带宽是很容">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-12-02T03:10:09.920Z">
+<meta property="og:updated_time" content="2018-04-15T18:04:18.887Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="My first blog">
-<meta name="twitter:description" content="新的博客建好了，以后我将在这里记录我的成长，包括但不限定于工作、学习、见识、思考。">
+<meta name="twitter:title" content="什么是缓存友好">
+<meta name="twitter:description" content="在现代计算机中，只有寄存器能在一个时钟周期移动数据。但由于寄存器非常昂贵,所以数量也比较少。而另一端的闪存（内存），是非常廉价的。但它的访问时间需要上百个时钟周期。那么对于它们之间的差距用什么来填充呢？那就是CPU的高速缓存，命名为L1、L2、L3。从L1到L3的速度和价格都是递减的。如果处理器不能在L1缓存中找到数据，则会在L2找，然后L3，再到内存。每一次miss都将损耗时间。 提高带宽是很容">
 
 
 
@@ -119,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/12/02/My-first-blog/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/02/09/Cache-Friendly/"/>
 
 
 
 
 
-  <title>My first blog | Lizhong's blog</title>
+  <title>什么是缓存友好 | Lizhong's blog</title>
   
 
 
@@ -242,7 +243,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/02/My-first-blog/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/09/Cache-Friendly/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Lizhong">
@@ -259,7 +260,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">My first blog</h1>
+          <h1 class="post-title" itemprop="name headline">什么是缓存友好</h1>
         
 
         <div class="post-meta">
@@ -271,8 +272,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-02T11:03:19+08:00">
-                2017-12-02
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-09T01:38:23+08:00">
+                2018-02-09
               </time>
             
 
@@ -309,7 +310,17 @@
       
 
       
-        <p>新的博客建好了，以后我将在这里记录我的成长，包括但不限定于工作、学习、见识、思考。</p>
+        <p>在现代计算机中，只有<a href="https://en.wikipedia.org/wiki/Processor_register" target="_blank" rel="noopener">寄存器</a>能在一个<a href="https://www.computerhope.com/jargon/c/clockcyc.htm" target="_blank" rel="noopener">时钟周期</a>移动数据。但由于寄存器非常昂贵,所以数量也比较少。而另一端的闪存（内存），是非常廉价的。但它的访问时间需要上百个时钟周期。那么对于它们之间的差距用什么来填充呢？那就是CPU的高速缓存，命名为L1、L2、L3。从L1到L3的速度和价格都是递减的。如果处理器不能在L1缓存中找到数据，则会在L2找，然后L3，再到内存。每一次miss都将损耗时间。</p>
+<p><strong>提高带宽是很容易的，但降低延迟非常难（物理性能决定）。</strong></p>
+<p>在现代计算机架构中，性能的瓶颈是访问各种缓存的。而提高cpu的频率在当前不再重要。重要的是memory access。CPU的设计一直关注在优化缓存，<a href="https://en.wikipedia.org/wiki/Cache_prefetching" target="_blank" rel="noopener">数据预取Prefetching</a>、<a href="https://en.wikipedia.org/wiki/Pipeline_(computing" target="_blank" rel="noopener">管线Pipeline</a>)、<a href="https://en.wikipedia.org/wiki/Concurrency_(computer_science" target="_blank" rel="noopener">并发concurrency</a>)。</p>
+<p>也就是说我们需要想办法提高缓存的命中率，很多时候这是编译器无法帮助我们优化的地方，因为它肯定会严格地按照代码顺序执行，而很多时候我们并不需要那么严格的顺序。</p>
+<h3 id="一些概念"><a href="#一些概念" class="headerlink" title="一些概念"></a>一些概念</h3><p>所有的缓存友好的代码都是关于<a href="https://en.wikipedia.org/wiki/Locality_of_reference" target="_blank" rel="noopener">局部性原理(Principle of locality)</a>的。</p>
+<p>1) 时间局部性(Temporal locality):当给到一个内存地址被访问过后，很有可能在短期内再次被访问，理想情况下，这些信息依然会缓存在这一点上。</p>
+<p>2) 空间局部性(Spatial Locality):如果一个特定的存储位置在特定的时间被引用，很有可能它附近的内存在未来一段时间内也会被引用。例如数组。</p>
+<h3 id="一些主要的优化手段"><a href="#一些主要的优化手段" class="headerlink" title="一些主要的优化手段"></a>一些主要的优化手段</h3><p>1) 使用合适的数据结构，例如C++的vector和list。vector的结构是顺序表，它里面的数据是存储在一段连续的内存里，访问它们的效率远高于list。</p>
+<p>2) 不要在数据结构和算法设计里忽略缓存，如果可能的话，去尝试改写你的数据结构和计算顺序最大程度上使用到缓存。例如一个常见的技术是<a href="https://web.archive.org/web/20140113145619/http://www.cs.berkeley.edu/~richie/cs267/mg/report/node35.html" target="_blank" rel="noopener">缓存阻塞 Cache blocking</a></p>
+<p>3) 避免不可预测的条件分支(unpredictable branches)，由于内存访问的问题而需要重新排序代码，现代计算机架构特性和编译器在这方面做得非常好。当你的关键代码包含不可预测条件分支时，它将很难预取数据。这将间接导致更多的缓存miss。相关问题（<a href="https://stackoverflow.com/questions/11227809/why-is-it-faster-to-process-a-sorted-array-than-an-unsorted-array" target="_blank" rel="noopener">为什么处理排序后的数组比未排序的要快？</a>）</p>
+<p>4) 避免虚函数调用，在C++中，虚函数在缓存miss上是一个有争论的问题（存在一个普遍的共识，在性能敏感的时候应该尽可能避免使用它）。虚函数在查询时能引起缓存miss。相关问题（<a href="https://stackoverflow.com/questions/667634/what-is-the-performance-cost-of-having-a-virtual-method-in-a-c-class" target="_blank" rel="noopener">虚函数在C++里的性能消耗</a>）</p>
 
       
     </div>
@@ -325,6 +336,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/Development/" rel="tag"># Development</a>
+          
+        </div>
+      
 
       
       
@@ -334,14 +351,18 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2017/12/02/N-Queens/" rel="next" title="N皇后问题">
+                <i class="fa fa-chevron-left"></i> N皇后问题
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/12/02/Value-Theory/" rel="prev" title="人的价值、我的观念">
-                人的价值、我的观念 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/04/03/What-is-memory-fence/" rel="prev" title="什么是内存栅栏">
+                什么是内存栅栏 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -394,8 +415,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -452,6 +482,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一些概念"><span class="nav-number">1.</span> <span class="nav-text">一些概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#一些主要的优化手段"><span class="nav-number">2.</span> <span class="nav-text">一些主要的优化手段</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
